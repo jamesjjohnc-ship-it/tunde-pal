@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { fullName, email, phone, telegram, address, signature, date } = body;
 
     const data = await resend.emails.send({
-      from: 'D&H Partners <onboarding@resend.dev>',
+      from: 'D&H Partners <no-reply@cmefgroup.com>',
       to: [process.env.SUPPORT_EMAIL as string],
       subject: `New Contract Signed: ${fullName}`,
       html: `
